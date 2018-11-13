@@ -1,0 +1,22 @@
+<div class="container" >
+  <div class="row">
+    <div class="col text-center">
+      <p class="lead" style="margin-top: 5px; margin-bottom: 5px">CS:GO Player Stats</p>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col">
+      <input type="text" class="form-control" style="margin-top: 5px" [(ngModel)]="steamId">
+    </div>
+  </div>
+  <nav style="text-align:center">
+    <button type="button" class="button_blue_gradient" style="margin: 10px" (click)="getDataFromSteam()">Check</button>
+    <button *ngIf="testMode" type="button" class="button_blue_gradient" style="margin: 10px" (click)="delete()">delete</button>
+    <button *ngIf="testMode" type="button" class="button_blue_gradient" style="margin: 10px" (click)="show()">ShowAll</button>
+  </nav>
+  <nav style="text-align:center">
+    <button routerLink="/navigate/graphs/statsMapsWeapons" *ngIf="addButton" type="button" class="button_blue_gradient" style="margin: 10px" (click)="add()">Add Player</button>
+    <button routerLink="/navigate/graphs/statsMapsWeapons" *ngIf="addButton" type="button" class="button_blue_gradient" style="margin: 10px" (click)="showStats()">Show Stats</button>
+  </nav>
+</div>
+<router-outlet></router-outlet>

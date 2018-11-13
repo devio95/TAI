@@ -1,0 +1,33 @@
+<nav style="text-align:center">
+    <button type="button" class="button_blue_gradient" style="margin: 10px" routerLink="/navigate/graphs" (click)="onSelect(stat)">Show Stats</button>
+    <button type="button" class="button_blue_gradient" style="margin: 10px" (click)="delete(stat)">Delete</button>
+  </nav>
+<table class="table table-bordered table-hover">
+  <thead>
+      <th scope="row">Name</th>
+      <th scope="row">AK-47</th>
+      <th scope="row">M4A4</th>
+      <th scope="row">AWP</th>
+      <th scope="row">P90</th>
+      <th scope="row">AUG</th>
+      <th scope="row">DEGLE</th>
+      <th scope="row">GLOCK</th>
+      <th scope="row">KNIFE</th>
+      <th scope="row">FAMAS</th>
+
+  </thead>
+  <tbody>
+      <tr (click)="selectStats(stat)" *ngFor="let stat of statsToShow">
+          <td>{{stat.playerName}}</td>
+          <td>{{stat.ak47_kills}}</td>
+          <td>{{stat.m4a4_kills}}</td>
+          <td>{{stat.awp_kills}}</td>
+          <td>{{stat.p90_kills}}</td>
+          <td>{{stat.aug_kills}}</td>
+          <td>{{stat.deagle_kills}}</td>
+          <td>{{stat.glock_kills}}</td>
+          <td>{{stat.knife_kills}}</td>
+          <td>{{stat.famas_kills}}</td>
+      </tr>
+  </tbody>
+</table>

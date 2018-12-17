@@ -13,6 +13,8 @@ import { StatsKDHSComponent } from './stats-kdhs/stats-kdhs.component';
 import { StatsMapsWeaponsComponent } from './stats-maps-weapons/stats-maps-weapons.component';
 import { NickAndAvatarComponent } from './nick-and-avatar/nick-and-avatar.component';
 import { CompareComponent } from './compare/compare.component';
+import { NgxChartsModule } from '@swimlane/ngx-charts';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 
 const appRoutes: Routes = [
@@ -56,6 +58,8 @@ const appRoutes: Routes = [
     BrowserModule,
     FormsModule,
     HttpClientModule,
+    NgxChartsModule,
+    BrowserAnimationsModule 
   ],
   providers: [
     ApiService,

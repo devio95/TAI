@@ -17,6 +17,10 @@ var StatsSchema = new mongoose.Schema({
   dust2:String,
   train:String,
   cbble:String,
+  kills:String,
+  deaths:String,
+  wins:String,
+  hs:String
   });
 
   module.exports = mongoose.model('Stats', StatsSchema);

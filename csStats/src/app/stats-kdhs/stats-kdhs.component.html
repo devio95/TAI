@@ -1,1 +1,27 @@
-KDHS
+<br>
+<br>
+<div class="container">
+    <div class="row">
+        <div class="col-md">
+                <ngx-charts-pie-chart
+                [view]="view"
+                [scheme]="colorScheme"
+                [results]="kd"
+                [gradient]="gradient"
+                [legend]="showLegend"
+                (select)="onSelect($event)">
+                </ngx-charts-pie-chart>
+        </div>
+        <div class="vl"></div>
+        <div class="col-md">
+                <ngx-charts-pie-chart
+                [view]="view"
+                [scheme]="colorScheme"
+                [results]="hs"
+                [gradient]="gradient"
+                [legend]="showLegend"
+                (select)="onSelect($event)">
+                </ngx-charts-pie-chart>
+        </div>
+    </div>
+</div>

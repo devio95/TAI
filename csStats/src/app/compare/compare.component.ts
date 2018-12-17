@@ -36,7 +36,6 @@ export class CompareComponent implements OnInit {
 
   selectStats(selectedItem: any){
     this.stat = selectedItem;
-    console.log(this.stat);
   }
 
   onSelect() {

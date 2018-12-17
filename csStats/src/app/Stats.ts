@@ -15,4 +15,8 @@ export class Stats {
     dust2:String;
     train:String;
     cbble:String;
+    kills:String;
+    deaths:String;
+    wins:String;
+    hs:String
 }

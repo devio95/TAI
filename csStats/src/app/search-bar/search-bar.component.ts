@@ -40,7 +40,7 @@ export class SearchBarComponent implements OnInit {
     this.steamId = '76561197998575131';
     this.addButton = false;
     this.getSucces = false;
-    this.testMode = true;
+    this.testMode = false;
   }
 
   getDataFromSteam(){
@@ -50,6 +50,7 @@ export class SearchBarComponent implements OnInit {
       this.api.getSteamData(this.url)
         .subscribe(data => {
           this.steamData = data;
+          console.log(data);
         }
         );
       this.url= "";
@@ -88,11 +89,17 @@ export class SearchBarComponent implements OnInit {
     this.StatsToSave.dust2 = this.findObject(this.steamData.playerstats.stats,"total_rounds_map_de_dust2").value;
     this.StatsToSave.train = this.findObject(this.steamData.playerstats.stats,"total_rounds_map_de_train").value;
     this.StatsToSave.cbble = this.findObject(this.steamData.playerstats.stats,"total_rounds_map_de_cbble").value;
+    this.StatsToSave.hs = this.findObject(this.steamData.playerstats.stats,"total_kills_headshot").value;
+    this.StatsToSave.kills = this.findObject(this.steamData.playerstats.stats,"total_kills").value;
+    this.StatsToSave.deaths = this.findObject(this.steamData.playerstats.stats,"total_deaths").value;
+    this.StatsToSave.wins = this.findObject(this.steamData.playerstats.stats,"total_wins").value;
+    // Saving stats to Service
     this.playerToShow.Stats = this.StatsToSave;
   }
 
   add(){
     this.showStats();
+    console.log(this.playerToShow.Stats);
     this.api.saveStats(this.playerToShow.Stats);
    }
 

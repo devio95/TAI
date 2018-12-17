@@ -44,5 +44,117 @@ export class PlayerToShowService {
     return stat;
   }
 
+  getMapsStats()
+  {
+    var stats = [
+      {
+        "name": "de_inferno",
+        "value": this.Stats.inferno
+      },
+      {
+        "name": "de_nuke",
+        "value": this.Stats.nuke
+      },
+      {
+        "name": "de_dust2",
+        "value": this.Stats.dust2
+      },
+      {
+        "name": "de_train",
+        "value": this.Stats.train
+      },
+      {
+        "name": "de_cobblestone",
+        "value": this.Stats.cbble
+      }
+    ];
+      return stats;
+  }
+
+  getKD()
+  {
+    var stats = [
+      {
+        "name": "kills",
+        "value": this.Stats.kills
+      },
+      {
+        "name": "deaths",
+        "value": this.Stats.deaths
+      }
+    ];
+      return stats;
+  }
+
+  getHs()
+  {
+    var stats = [
+      {
+        "name": "Headshots",
+        "value": this.Stats.hs
+      },
+      {
+        "name": "Total Kills",
+        "value" : this.Stats.kills
+      }
+    ];
+      return stats;
+  }
+
+  getWins()
+  {
+    var stats = [
+      {
+        "name": "wins",
+        "value": this.Stats.wins
+      }
+    ];
+      return stats;
+  }
+
+  getWeaponsStats()
+  {
+    var stats = [
+      {
+        "name": "AK-47",
+        "value": this.Stats.ak47_kills
+      },
+      {
+        "name": "M4A4",
+        "value": this.Stats.m4a4_kills
+      },
+      {
+        "name": "AWP",
+        "value": this.Stats.awp_kills
+      },
+      {
+        "name": "P90",
+        "value": this.Stats.p90_kills
+      },
+      {
+        "name": "AUG",
+        "value": this.Stats.aug_kills
+      },
+      {
+        "name": "DEAGLE",
+        "value": this.Stats.deagle_kills
+      },
+      {
+        "name": "GLOCK",
+        "value": this.Stats.glock_kills
+      },
+      {
+        "name": "KNIFE",
+        "value": this.Stats.knife_kills
+      },
+      {
+        "name": "FAMAS",
+        "value": this.Stats.famas_kills
+      },
+
+    ];
+      return stats;
+  }
+
   constructor() { }
 }

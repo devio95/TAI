@@ -1,5 +1,5 @@
 <nav style="text-align:center">
-    <button type="button" class="button_blue_gradient" style="margin: 10px" routerLink="/navigate/graphs" (click)="onSelect(stat)">Show Stats</button>
+    <button type="button" class="button_blue_gradient" style="margin: 10px" routerLink="/navigate/graphs/statsKDHS" (click)="onSelect(stat)">Show Stats</button>
     <button type="button" class="button_blue_gradient" style="margin: 10px" (click)="delete(stat)">Delete</button>
   </nav>
 <table class="table table-bordered table-hover">
@@ -14,6 +14,10 @@
       <th scope="row">GLOCK</th>
       <th scope="row">KNIFE</th>
       <th scope="row">FAMAS</th>
+      <th scope="row">KILLS</th>
+      <th scope="row">DEATHS</th>
+      <th scope="row">HS</th>
+      <th scope="row">ROUND WINS</th>
 
   </thead>
   <tbody>
@@ -28,6 +32,10 @@
           <td>{{stat.glock_kills}}</td>
           <td>{{stat.knife_kills}}</td>
           <td>{{stat.famas_kills}}</td>
+          <td>{{stat.kills}}</td>
+          <td>{{stat.deaths}}</td>
+          <td>{{stat.hs}}</td>
+          <td>{{stat.wins}}</td>
       </tr>
   </tbody>
 </table>

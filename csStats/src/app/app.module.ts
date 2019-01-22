@@ -15,6 +15,11 @@ import { NickAndAvatarComponent } from './nick-and-avatar/nick-and-avatar.compon
 import { CompareComponent } from './compare/compare.component';
 import { NgxChartsModule } from '@swimlane/ngx-charts';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { RegisterComponent } from './register/register.component';
+import { LoginComponent } from './login/login.component';
+import { SignupComponent } from './signup/signup.component';
+import { UserPanelComponent } from './user-panel/user-panel.component';
+import { LogoutComponent } from './logout/logout.component';
 
 
 const appRoutes: Routes = [
@@ -39,6 +44,28 @@ const appRoutes: Routes = [
         component: CompareComponent
       }
     ]
+  },
+  {
+    path: 'register',
+    component: RegisterComponent
+  },
+  {
+    path: 'login',
+    component: LoginComponent,
+    data: { title: 'Login' }
+  },
+  {
+    path: 'signup',
+    component: SignupComponent,
+    data: { title: 'Sign Up' }
+  },
+  { path: '',
+  redirectTo: '/navigate',
+  pathMatch: 'full'
+  },
+  {
+    path: '404',
+    component: NavBarComponent
   }
 ];
 
@@ -51,7 +78,12 @@ const appRoutes: Routes = [
     StatsKDHSComponent,
     StatsMapsWeaponsComponent,
     NickAndAvatarComponent,
-    CompareComponent
+    CompareComponent,
+    RegisterComponent,
+    LoginComponent,
+    SignupComponent,
+    UserPanelComponent,
+    LogoutComponent
   ],
   imports: [
     RouterModule.forRoot(appRoutes),

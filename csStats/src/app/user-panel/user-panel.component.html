@@ -1,0 +1,6 @@
+<div *ngIf="Logged" style="text-align:center"> 
+  <button routerLink="/navigate/compare" type="button" class="button_blue_gradient" style="margin:5px">Compare</button>
+  <button type="button" class="button_blue_gradient" style="margin: 10px" (click)="add()">Add Player</button>
+  <button type="button" class="button_blue_gradient" style="margin:5px" (click)="playerStats()">Player Stats</button>
+  <app-logout></app-logout>
+</div>

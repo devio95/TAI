@@ -19,4 +19,6 @@ export class Stats {
     deaths:String;
     wins:String;
     hs:String
+    _id: Object;
+    idAccount: String;
 }

@@ -11,7 +11,7 @@ export class StatsMapsWeaponsComponent implements OnInit {
   maps: any;
   weapons: any[];
 
-  view: any[] = [500, 300];
+  view: any[] = [350, 296];
 
   // options
   showXAxis = true;
@@ -34,7 +34,10 @@ export class StatsMapsWeaponsComponent implements OnInit {
   ngOnInit() {
     this.maps = this.playerToShow.getMapsStats();
     this.weapons = this.playerToShow.getWeaponsStats();
+    console.log(this.playerToShow.getPlayerName());
   }
+
+
 
   onSelect(event) {
     console.log(event);

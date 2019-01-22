@@ -11,12 +11,9 @@
   </div>
   <nav style="text-align:center">
     <button routerLink="" type="button" class="button_blue_gradient" style="margin: 10px" (click)="getDataFromSteam()">Check</button>
-    <button *ngIf="testMode" type="button" class="button_blue_gradient" style="margin: 10px" (click)="delete()">delete</button>
-    <button *ngIf="testMode" type="button" class="button_blue_gradient" style="margin: 10px" (click)="show()">ShowAll</button>
   </nav>
   <nav style="text-align:center">
-    <button routerLink="/navigate/graphs/statsMapsWeapons" *ngIf="addButton" type="button" class="button_blue_gradient" style="margin: 10px" (click)="add()">Add Player</button>
-    <button routerLink="/navigate/graphs/statsMapsWeapons" *ngIf="addButton" type="button" class="button_blue_gradient" style="margin: 10px" (click)="showStats()">Show Stats</button>
+    <button routerLink="/navigate/graphs/statsMapsWeapons" *ngIf="showShowStats" type="button" class="button_blue_gradient" style="margin: 10px" (click)="showStats()">Show Stats</button>
   </nav>
 </div>
 <router-outlet></router-outlet>

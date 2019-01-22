@@ -1,23 +1,24 @@
 <nav style="text-align:center">
     <button type="button" class="button_blue_gradient" style="margin: 10px" routerLink="/navigate/graphs/statsKDHS" (click)="onSelect(stat)">Show Stats</button>
     <button type="button" class="button_blue_gradient" style="margin: 10px" (click)="delete(stat)">Delete</button>
+    <button type="button" class="button_blue_gradient" style="margin: 10px" (click)="refresh()">Refresh</button>
   </nav>
 <table class="table table-bordered table-hover">
   <thead>
-      <th scope="row">Name</th>
-      <th scope="row">AK-47</th>
-      <th scope="row">M4A4</th>
-      <th scope="row">AWP</th>
-      <th scope="row">P90</th>
-      <th scope="row">AUG</th>
-      <th scope="row">DEGLE</th>
-      <th scope="row">GLOCK</th>
-      <th scope="row">KNIFE</th>
-      <th scope="row">FAMAS</th>
-      <th scope="row">KILLS</th>
-      <th scope="row">DEATHS</th>
-      <th scope="row">HS</th>
-      <th scope="row">ROUND WINS</th>
+      <th>Name</th>
+      <th sortable-column="ak">AK-47</th>
+      <th sortable-column="id">M4A4</th>
+      <th sortable-column="id">AWP</th>
+      <th sortable-column="id">P90</th>
+      <th sortable-column="id">AUG</th>
+      <th sortable-column="id">DEGLE</th>
+      <th sortable-column="id">GLOCK</th>
+      <th sortable-column="id">KNIFE</th>
+      <th sortable-column="id">FAMAS</th>
+      <th sortable-column="id">KILLS</th>
+      <th sortable-column="id">DEATHS</th>
+      <th sortable-column="id">HS</th>
+      <th sortable-column="id">ROUND WINS</th>
 
   </thead>
   <tbody>

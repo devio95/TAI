@@ -20,7 +20,8 @@ var StatsSchema = new mongoose.Schema({
   kills:String,
   deaths:String,
   wins:String,
-  hs:String
+  hs:String,
+  idAccount:String
   });
 
   module.exports = mongoose.model('Stats', StatsSchema);

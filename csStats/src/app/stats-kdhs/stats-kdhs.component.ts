@@ -16,16 +16,19 @@ export class StatsKDHSComponent implements OnInit {
 
   ngOnInit() {
     this.hs = this.playerToShow.getHs();
-  this.kd = this.playerToShow.getKD();
+    this.kd = this.playerToShow.getKD();
+    console.log(this.hs);
+    console.log(this.kd);
   }
-  view: any[] = [500, 300];
+  view: any[] = [300, 200];
   hs: any;
   kd: any[];
 // options
 showXAxis = true;
 showYAxis = true;
 gradient = false;
-showLegend = true;
+showLegend = false;
+showLabels = true;
 showXAxisLabel = false;
 showYAxisLabel = false;
 xAxisLabelMaps = 'Map name';

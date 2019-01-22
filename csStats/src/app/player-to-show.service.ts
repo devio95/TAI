@@ -1,5 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Stats } from 'src/app/Stats';
+import { StaticReflector } from '@angular/compiler';
+import { LinkService } from './link.service';
 
 @Injectable({
   providedIn: 'root'
@@ -8,6 +10,10 @@ export class PlayerToShowService {
 
   Stats: Stats;
   Id: any;
+
+  constructor(private Link: LinkService) { 
+    this.Stats = null;
+  }
 
   getPlayerName(){
     return this.Stats.playerName;
@@ -23,7 +29,8 @@ export class PlayerToShowService {
   }
 
   getStatsFromJSON(data){
-    var stat = new Stats();
+    let stat : Stats;
+    stat = new Stats();
     stat.avatar = data.avatar;
     stat.playerName = data.playerName;
     stat.ak47_kills = data.ak47_kills;
@@ -40,8 +47,16 @@ export class PlayerToShowService {
     stat.dust2 = data.dust2;
     stat.train = data.train;
     stat.cbble = data.cbble;
-
+    stat.kills = data.kills;
+    stat.deaths = data.deaths;
+    stat.hs = data.hs;
+    stat.wins = data.wins;
+    stat._id = data._id;
+    stat.idAccount = this.Link.Link.idAccount;
+    this.Stats = stat;
+    console.log(this.Stats);
     return stat;
+    
   }
 
   getMapsStats()
@@ -73,6 +88,8 @@ export class PlayerToShowService {
 
   getKD()
   {
+    var killPercent = Number(this.Stats.kills)/Number(this.Stats.deaths)*100;
+    var deathPercent = Number(this.Stats.deaths)/Number(this.Stats.kills)*100;
     var stats = [
       {
         "name": "kills",
@@ -156,5 +173,5 @@ export class PlayerToShowService {
       return stats;
   }
 
-  constructor() { }
+
 }
